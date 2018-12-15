@@ -1,0 +1,33 @@
+{#It's like html files extending html 
+files in a way. Base extends html tags #}
+
+
+{% extends 'base.html.twig' %}
+
+{#Blocks seem like divs an area of text  
+These curly braces seem like Twigs logic#}
+
+{% block title %} 
+    Test Title 
+{% endblock %}
+
+{% block body %}
+    <h1>
+        Test html page
+    </h1>
+    <h2>
+        Received data from controller: {{data}}
+    
+        {#Array passed data straight through from
+        controller and logic is done that way.#}
+        {% if data|length > 5 %}
+            <h2>
+                Greater than 5 characters
+            </h2>
+        {% else %}
+            <h2>
+                Less than 5 characters
+            </h2>
+        {% endif %}
+    </h2>
+{% endblock %}
