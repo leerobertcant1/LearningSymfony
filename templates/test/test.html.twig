@@ -31,3 +31,13 @@ These curly braces seem like Twigs logic#}
         {% endif %}
     </h2>
 {% endblock %}
+{% block javascript %}
+<script>
+$(function() {    
+    console.log("Page loaded from JS text");
+ });</script>
+{% endblock %}
+
+{% block javascripts %}
+    <script src ="/src/Js/Test.js"></script>
+{% endblock %}
